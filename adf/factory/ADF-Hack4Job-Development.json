@@ -1,0 +1,9 @@
+{
+	"name": "ADF-Hack4Job-Development",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6cedef36-3984-4a60-bbb6-eed931633e1d",
+		"tenantId": "3b770d9d-c38c-49d7-864b-efb4d6f28576"
+	}
+}
