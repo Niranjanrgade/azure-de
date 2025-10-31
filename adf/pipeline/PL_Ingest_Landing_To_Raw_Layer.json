@@ -52,14 +52,8 @@
 						"referenceName": "DS_ADLS_CSV_Source",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": {
-								"value": "@pipeline().parameters.InputFileName",
-								"type": "Expression"
-							},
-							"FilePath": {
-								"value": "@pipeline().parameters.InputFilePath",
-								"type": "Expression"
-							}
+							"FileName": "PlaceHolder",
+							"FilePath": "PlaceHolder"
 						}
 					}
 				],
