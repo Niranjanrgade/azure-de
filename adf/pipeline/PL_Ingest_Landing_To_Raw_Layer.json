@@ -49,18 +49,34 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ADLS_CSV_Source",
+						"referenceName": "DS_ADLS_Dynamic_CSV_Source",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "PlaceHolder",
-							"FilePath": "PlaceHolder"
+							"FileName": {
+								"value": "@pipeline().parameters.InputFileName",
+								"type": "Expression"
+							},
+							"FilePath": {
+								"value": "@pipeline().parameters.InputFilePath",
+								"type": "Expression"
+							}
 						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_ADLS_CSV_Sink",
-						"type": "DatasetReference"
+						"referenceName": "DS_ADLS_Dynamic_CSV_Source",
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": {
+								"value": "@pipeline().parameters.OutPutFileName",
+								"type": "Expression"
+							},
+							"FilePath": {
+								"value": "@pipeline().parameters.OutputFilePath",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

@@ -27,10 +27,11 @@
 					"value": "@dataset().FileName",
 					"type": "Expression"
 				},
-				"fileSystem": {
+				"folderPath": {
 					"value": "@dataset().FilePath",
 					"type": "Expression"
-				}
+				},
+				"fileSystem": "fsadls"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
