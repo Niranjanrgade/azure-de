@@ -65,18 +65,8 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_ADLS_CSV",
-						"type": "DatasetReference",
-						"parameters": {
-							"FileName": {
-								"value": "@pipeline().parameters.OutPutFileName",
-								"type": "Expression"
-							},
-							"FilePath": {
-								"value": "@pipeline().parameters.OutputFilePath",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "DS_ADLS_CSV_Sink",
+						"type": "DatasetReference"
 					}
 				]
 			}
