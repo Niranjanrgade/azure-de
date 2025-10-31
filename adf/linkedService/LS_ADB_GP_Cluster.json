@@ -1,0 +1,13 @@
+{
+	"name": "LS_ADB_GP_Cluster",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-2934373878546025.5.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/c21ea4be-cc01-4e8a-b86f-07e8149bfa50/resourceGroups/RG-Hack4Job-Development/providers/Microsoft.Databricks/workspaces/adb-hack4job-dev-ws",
+			"existingClusterId": "1031-134057-mcoxc4qf"
+		}
+	}
+}
