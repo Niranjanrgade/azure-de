@@ -52,8 +52,14 @@
 						"referenceName": "DS_ADLS_CSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "PlaceHolder",
-							"FilePath": "PlaceHolder"
+							"FileName": {
+								"value": "@pipeline().parameters.InputFileName",
+								"type": "Expression"
+							},
+							"FilePath": {
+								"value": "@pipeline().parameters.InputFilePath",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -62,18 +68,30 @@
 						"referenceName": "DS_ADLS_CSV",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "PlaceHolder",
-							"FilePath": "PlaceHolder"
+							"FileName": {
+								"value": "@pipeline().parameters.OutPutFileName",
+								"type": "Expression"
+							},
+							"FilePath": {
+								"value": "@pipeline().parameters.OutputFilePath",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
 		"parameters": {
-			"FileName": {
+			"InputFileName": {
 				"type": "string"
 			},
-			"FilePath": {
+			"InputFilePath": {
+				"type": "string"
+			},
+			"OutPutFileName": {
+				"type": "string"
+			},
+			"OutputFilePath": {
 				"type": "string"
 			}
 		},
