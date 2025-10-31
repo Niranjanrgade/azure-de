@@ -1,5 +1,5 @@
 {
-	"name": "DS_ADLS_CSV_Source",
+	"name": "DS_ADLS_Dynamic_CSV_Source",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLS",
@@ -23,9 +23,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "PolicyDetails.csv",
-				"folderPath": "landing",
-				"fileSystem": "fsadls"
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().FilePath",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

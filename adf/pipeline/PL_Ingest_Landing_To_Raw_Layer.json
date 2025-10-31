@@ -49,7 +49,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ADLS_CSV",
+						"referenceName": "DS_ADLS_CSV_Source",
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": {
